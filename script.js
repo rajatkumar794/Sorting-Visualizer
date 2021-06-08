@@ -5,9 +5,8 @@ let startButton = document.querySelector(".start")
 
 let inputSize = sizeSlider.value;
 let currentAlgo = "selection"
-let array = [];
-let arrayElements = []
-let elementWidth = width = ((window.innerWidth/20)/(2*50))
+let array = []
+let elementWidth = ((window.innerWidth/20)/(2*50))
 
 initializeArray()
 displayArray()

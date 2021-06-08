@@ -21,8 +21,7 @@ async function selectionSort()
         let min_idx = i;
         for (let j = i+1; j < n; j++)
         {   mark("comparing-element",j)
-            //displayArray()
-            renderArray()
+            displayArray()
             await pause(20)
             if (compare(min_idx,j))
             {
@@ -32,8 +31,7 @@ async function selectionSort()
         }    
         await swap(i,min_idx)
         mark("sorted",i)
-        //displayArray()
-        renderArray()
+        displayArray()
     }
 }
 
@@ -169,25 +167,25 @@ async function partition(low, high)
     let pivot = Number(array[high].value);
     mark("current-element", high)
     let i = low-1, j=low;
-    //displayArray()
+    displayArray()
     await pause(20)
     for(let j = low; j <= high - 1; j++)
     {   let flag=false;
-        //displayArray()
+        displayArray()
         await pause(20)
         if (Number(array[j].value) < pivot)
         {   
             i++;
             mark("comparing-element",i)
             swap(i, j);
-            //displayArray()
+            displayArray()
             await pause(20)
             flag=true;
         }
         if(flag)
         {
             mark("sorted",i)
-            //displayArray()
+            displayArray()
             await pause(20)
         }
         
@@ -216,6 +214,6 @@ async function quickSortHelper(low, high)
         await quickSortHelper(low, pi - 1);
 
         await quickSortHelper(pi + 1, high);
-        //displayArray()
+        displayArray()
     }
 }

@@ -14,18 +14,6 @@ function displayArray(){
         newElement.style.width=elementWidth+"vw"
         content.append(newElement)
     }
-    arrayElements = content.querySelector(".array-element")
-}
-
-
-function renderArray(s,e)
-{   
-    for(let i = 0; i<inputSize; i++)
-    {
-        let value =  array[i].value
-        arrayElements[i].setAttribute("value",value);
-        arrayElements[i].style.height=value+"px"
-    }
 }
 
 function initializeArray(){

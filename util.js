@@ -16,11 +16,18 @@ async function pause(time) {
     return new Promise(resolve => {
         setTimeout(function(){
             resolve();
-        }, 1000);
+        }, time);
     });
 }
 
 function mark(status,i){
-    arrayElements[i].style.background = colorCodes.status;
+    array[i].status = status
 }
 
+function shiftArray(s,e)
+{   
+    let temp = array[e+1].value
+    for(let i=e; i>=s; --i)
+        array[i+1].value=array[i].value;
+    array[s].value=temp;
+}
