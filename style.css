@@ -12,7 +12,7 @@
     background: #333333;
     display: flex;
     color: white;
-    font-size: 17px;    
+    font-size: 2.3vh;    
 }
 
 .new-array{
@@ -71,11 +71,12 @@
     align-items: center;
     justify-content: center;
     background: brown;
+    cursor: pointer;
 }
 .visualizer{
     height: 90vh;
     width: 100vw;
-    background: white;
+    background: #ecf0f1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -83,8 +84,8 @@
 
 
 .array-element{
-    margin-top: 50px;
-    margin-left: 1px;
+    /* margin-top: 5vh; */
+    margin-left: .2vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,12 +97,12 @@
  }
 
  .current-element{
-     background: #e74c3c;
+     background: #2ecc71;
      transition: all .4s ease-in;
  }
 
  .comparing-element{
-     background: #2ecc71;
+     background: #e74c3c;
      transition: height .5s ease-in;
  }
 

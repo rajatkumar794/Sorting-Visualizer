@@ -22,7 +22,7 @@ function initializeArray(){
     array = []
     for(let i = 0; i<inputSize; i++)
     {   
-        let value =  Math.floor(Math.random() * 500) + 1;
+        let value =  Math.floor(Math.random() * 650) + 1;
         let newElement = {"value":value, "status": "unsorted"}
         array.push(newElement)
     }

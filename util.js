@@ -1,3 +1,17 @@
+function startSorting()
+{
+    if(currentAlgo=="selection")
+        selectionSort();
+    else if(currentAlgo=="bubble")
+        bubbleSort();
+    else if(currentAlgo=="insertion")
+        insertionSort()
+    else if(currentAlgo=="merge")
+        mergeSort()
+    else if(currentAlgo=="quick")
+        quickSort()
+}
+
 function compare(i, j)
 {   
     let a = Number(array[i].value)

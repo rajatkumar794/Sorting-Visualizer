@@ -1,18 +1,3 @@
-function startSorting()
-{
-    if(currentAlgo=="selection")
-        selectionSort();
-    else if(currentAlgo=="bubble")
-        bubbleSort();
-    else if(currentAlgo=="insertion")
-        insertionSort()
-    else if(currentAlgo=="merge")
-        mergeSort()
-    else if(currentAlgo=="quick")
-        quickSort()
-}
-
-
 async function selectionSort()
 {
     let n = inputSize
@@ -24,9 +9,11 @@ async function selectionSort()
             displayArray()
             await pause(20)
             if (compare(min_idx,j))
-            {
+            {   mark("unsorted",min_idx)
                 min_idx = j;
+                mark("current-element",min_idx)
             }
+            else
             mark("unsorted",j)
         }    
         await swap(i,min_idx)
@@ -161,6 +148,32 @@ async function merge(l, m, r)
         mark("unsorted",k);
 }
 
+async function quickSort()
+{
+    await quickSortHelper(0, inputSize-1)
+    for(let i=0; i<array.length; ++i)
+        mark("sorted", i)
+}
+
+async function quickSortHelper(low, high)
+{   
+    if(low==high)
+    {
+        for(let i=0; i<=low; ++i)
+            mark("sorted", i)
+    }
+    else if (low <high)
+    {
+        let pi = await partition(low, high);
+
+        await quickSortHelper(low, pi - 1);
+
+        await quickSortHelper(pi + 1, high);
+        // for(let i=0; i<inputSize; ++i)
+        // mark("sorted", i)
+        displayArray()
+    }
+}
 
 async function partition(low, high)
 {   
@@ -169,51 +182,28 @@ async function partition(low, high)
     let i = low-1, j=low;
     displayArray()
     await pause(20)
-    for(let j = low; j <= high - 1; j++)
-    {   let flag=false;
+    for(let j = low; j<high; j++)
+    {   
+        mark("comparing-element",j)
         displayArray()
         await pause(20)
         if (Number(array[j].value) < pivot)
         {   
             i++;
-            mark("comparing-element",i)
             swap(i, j);
             displayArray()
             await pause(20)
-            flag=true;
         }
-        if(flag)
-        {
-            mark("sorted",i)
-            displayArray()
-            await pause(20)
-        }
+        mark("unsorted",j)
         
     }
     swap(i + 1, high);
-    if(high==low+1)
-    {
-        mark("sorted", low)
-    }
-    mark("sorted", high)
-
-    return (i + 1);
-}
-function quickSort()
-{
-    quickSortHelper(0, inputSize-1)
     
-}
-
-async function quickSortHelper(low, high)
-{
-    if (low <=high)
+    mark("unsorted", high)
+    if(low+1==high)
     {
-        let pi = await partition(low, high);
-
-        await quickSortHelper(low, pi - 1);
-
-        await quickSortHelper(pi + 1, high);
-        displayArray()
+        mark("sorted",low);
+        mark("sorted",high);
     }
+    return (i + 1);
 }
