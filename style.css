@@ -2,17 +2,17 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
 }
 
 .toolbar{
     height: 10vh;
     width: 100vw;
-    background: cadetblue;
+    background: #333333;
     display: flex;
     color: white;
-    font-size: 17px;
-    
-    cursor: pointer;
+    font-size: 17px;    
 }
 
 .new-array{
@@ -21,7 +21,9 @@
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    cursor: pointer;
+
 }
 .array-size{
     height: 100%;
@@ -30,7 +32,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
 .alter-size{
@@ -43,14 +44,17 @@
     width: 50%;
     display: flex;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
 .sorting-speed{
     height: 100%;
     width: 15%;
+    border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 .sorting-algo div{
     height: 100%;
@@ -71,7 +75,7 @@
 .visualizer{
     height: 90vh;
     width: 100vw;
-    background: burlywood;
+    background: white;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -88,16 +92,16 @@
 }
 
  .active-algo{
-     opacity: 0.5;
+     background: #04aa6d;
  }
 
  .current-element{
-     background: red;
+     background: #e74c3c;
      transition: all .4s ease-in;
  }
 
  .comparing-element{
-     background: greenyellow;
+     background: #2ecc71;
      transition: height .5s ease-in;
  }
 
@@ -107,6 +111,6 @@
  }
 
  .unsorted{
-     background: black;
+     background: #333333;
      transition: height .4s ease-in;
  }
