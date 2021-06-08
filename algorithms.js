@@ -151,8 +151,9 @@ async function merge(l, m, r)
 async function quickSort()
 {
     await quickSortHelper(0, inputSize-1)
-    for(let i=0; i<array.length; ++i)
-        mark("sorted", i)
+    mark("sorted", array.length-1)
+    displayArray()
+    
 }
 
 async function quickSortHelper(low, high)
@@ -169,8 +170,6 @@ async function quickSortHelper(low, high)
         await quickSortHelper(low, pi - 1);
 
         await quickSortHelper(pi + 1, high);
-        // for(let i=0; i<inputSize; ++i)
-        // mark("sorted", i)
         displayArray()
     }
 }

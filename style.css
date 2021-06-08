@@ -98,20 +98,20 @@
 
  .current-element{
      background: #2ecc71;
-     transition: all .4s ease-in;
+     transition: all .6s ease-in;
  }
 
  .comparing-element{
      background: #e74c3c;
-     transition: height .5s ease-in;
+     transition: height .7s ease-in;
  }
 
  .sorted{
      background: palevioletred;
-     transition: height .4s ease-in;
+     transition: height .6s ease-in;
  }
 
  .unsorted{
      background: #333333;
-     transition: height .4s ease-in;
+     transition: height .6s ease-in;
  }
