@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-app">
+        <div class="toolbar">
+            <div class="new-array">Generate New Array</div>
+            <div class="array-size">
+                Array Size<input type="range" min="0" max="100" class="alter-size">
+            </div>
+            <div class="sorting-algo">
+                <div class="algo selection active-algo">Selection Sort</div>
+                <div class="algo bubble"> Bubble Sort</div>
+                <div class="algo insertion">Insertion Sort</div>
+                <div class="algo merge">Merge Sort</div>
+                <div class="algo quick">Quick Sort</div>
+            </div>
+            <div class="start">Start</div>
+        </div>
+        <div class="visualizer">
+        </div>
+    </div>
+    <script src="./array.js"></script>
+    <script src="./util.js"></script>
+    <script src="./sort.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

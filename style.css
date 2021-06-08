@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.toolbar{
+    height: 10vh;
+    width: 100vw;
+    background: cadetblue;
+    display: flex;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.new-array{
+    height: 100%;
+    width: 15%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.array-size{
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alter-size{
+    cursor: pointer;
+}
+
+.sorting-algo{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sorting-algo div{
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: brown;
+}
+.visualizer{
+    height: 90vh;
+    width: 100vw;
+    background: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.array-element{
+    margin-top: 50px;
+    margin-left: 1px;
+    transition: all .4s ease-in;
+}
+ .active-algo{
+     opacity: 0.5;
+ }
+
+ .current-element{
+     background: red;
+     transition: all .4s ease-in;
+ }
+
+ .comparing-element{
+     background: greenyellow;
+     transition: height .5s;
+ }
+
+ .sorted{
+     background: palevioletred;
+     transition: height .4s ease-in;
+ }
+
+ .unsorted{
+     background: black;
+     transition: height .4s ease-in;
+ }
