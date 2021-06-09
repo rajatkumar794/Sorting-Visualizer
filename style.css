@@ -46,6 +46,7 @@
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
+    flex-wrap: wrap;
 }
 
 .sorting-speed{
@@ -54,8 +55,9 @@
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     cursor: pointer;
+    flex-wrap: wrap;
 }
 .sorting-algo div{
     height: 100%;
@@ -63,8 +65,8 @@
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: space-around;
+    text-align: center;
 }
 
 .start{
@@ -127,7 +129,6 @@
         font-size: 1.5vh;
         flex-direction: column;
         position: absolute;
-        margin-right: 20px;
     }
     .new-array{
         height: 10%;
