@@ -7,7 +7,7 @@ let currentArrSize = document.querySelector(".current-size")
 let inputSize = sizeSlider.value;
 let currentAlgo = "selection"
 let array = []
-let elementWidth = ((window.innerWidth/20)/(2*50));
+let elementWidth = ((window.innerWidth/5)/(2*50));
 let baseDelay = 400;
 let sortDelay = baseDelay;
 let textSize = elementWidth/5;
@@ -19,7 +19,10 @@ currentArrSize.innerHTML = 50;
 sizeSlider.addEventListener("input", function(e){
     inputSize=sizeSlider.value;
     currentArrSize.innerHTML = inputSize;
-    elementWidth = ((window.innerWidth/20)/(2*inputSize))
+    if(window.innerWidth<500)
+        elementWidth = ((window.innerWidth/5)/(2*inputSize))
+    else
+        elementWidth = ((window.innerWidth/20)/(2*inputSize))
     textSize=elementWidth/5;
     initializeArray()
     displayArray()
