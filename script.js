@@ -9,10 +9,9 @@ let currentAlgo = "selection"
 let array = []
 let baseDelay = 400;
 let sortDelay = baseDelay;
-let textSize = elementWidth/5;
 
-let elementWidth;
-elementWidth = (window.innerWidth<500)?((window.innerWidth/5)/(2*50)): ((window.innerWidth/20)/(2*50));
+let elementWidth = (window.innerWidth<500)?((window.innerWidth/5)/(2*50)): ((window.innerWidth/20)/(2*50));
+let textSize = elementWidth/5;
 
 initializeArray()
 displayArray()
