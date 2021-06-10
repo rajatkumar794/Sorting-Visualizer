@@ -17,17 +17,17 @@
 
 .new-array{
     height: 100%;
-    width: 10%;
+    width: 11%;
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
+    text-align: center;
 }
 .array-size{
     height: 100%;
-    width: 17%;
+    width: 18%;
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@
 
 .sorting-speed{
     height: 100%;
-    width: 15%;
+    width: 13%;
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
@@ -100,7 +100,7 @@
 .in-progress{
     height: 100%;
     width: 100%;
-    background: white;
+    background: #ecf0f1;
     display: flex;
     align-items: flex-end;
     justify-content: center;
