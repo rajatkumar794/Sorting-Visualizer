@@ -154,7 +154,6 @@ async function quickSort()
     mark("sorted", array.length-2)
     mark("sorted", array.length-1)
     displayArray()
-    
 }
 
 async function quickSortHelper(low, high)
