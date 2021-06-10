@@ -1,15 +1,17 @@
-function startSorting()
+async function startSorting()
 {
     if(currentAlgo=="selection")
-        selectionSort();
+        await selectionSort();
     else if(currentAlgo=="bubble")
-        bubbleSort();
+        await bubbleSort();
     else if(currentAlgo=="insertion")
-        insertionSort()
+        await insertionSort()
     else if(currentAlgo=="merge")
-        mergeSort()
+        await mergeSort()
     else if(currentAlgo=="quick")
-        quickSort()
+        await quickSort()
+    statusBar.querySelector(".in-progress").classList.add("hide")
+    statusBar.querySelector(".success").classList.remove("hide")
 }
 
 function compare(i, j)

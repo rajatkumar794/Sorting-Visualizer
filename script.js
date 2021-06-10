@@ -3,6 +3,7 @@ let speedChoice = document.querySelector(".alter-speed")
 let generateNewArray = document.querySelector(".new-array")
 let algoList = document.querySelectorAll(".algo")
 let startButton = document.querySelector(".start")
+let statusBar = document.querySelector(".status-bar")
 let currentArrSize = document.querySelector(".current-size")
 let inputSize = sizeSlider.value;
 let currentAlgo = "selection"
@@ -17,6 +18,11 @@ displayArray()
 currentArrSize.innerHTML = 50;
 
 sizeSlider.addEventListener("input", function(e){
+    if(startButton.classList.contains("hide"))
+    {   
+        statusBar.querySelector(".success").classList.add("hide")
+        startButton.classList.remove("hide")
+    }
     inputSize=sizeSlider.value;
     currentArrSize.innerHTML = inputSize;
     if(window.innerWidth<500)
@@ -42,6 +48,11 @@ speedChoice.addEventListener("change", function(e){
 })
 
 generateNewArray.addEventListener("click", function(e){
+    if(startButton.classList.contains("hide"))
+    {   
+        statusBar.querySelector(".success").classList.add("hide")
+        startButton.classList.remove("hide")
+    }
     initializeArray()
     displayArray()
 })
@@ -58,6 +69,10 @@ for(let i=0; i<algoList.length; ++i)
     })
 }
 
-startButton.addEventListener("click", function(e){
-    startSorting()
+startButton.addEventListener("click", async function(e){
+    if(!e.target.classList.contains("hide"))
+    {   e.target.classList.add("hide");
+        statusBar.querySelector(".in-progress").classList.remove("hide")
+        await startSorting();
+    }
 })
