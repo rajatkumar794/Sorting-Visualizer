@@ -11,7 +11,6 @@ let baseDelay = 400;
 let sortDelay = baseDelay;
 
 let elementWidth = (window.innerWidth<500)?((window.innerWidth/5)/(2*50)): ((window.innerWidth/20)/(2*50));
-let textSize = elementWidth/5;
 
 initializeArray()
 displayArray()
@@ -24,7 +23,6 @@ sizeSlider.addEventListener("input", function(e){
         elementWidth = ((window.innerWidth/5)/(2*inputSize))
     else
         elementWidth = ((window.innerWidth/20)/(2*inputSize))
-    textSize=elementWidth/5;
     initializeArray()
     displayArray()
 })

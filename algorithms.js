@@ -151,6 +151,7 @@ async function merge(l, m, r)
 async function quickSort()
 {
     await quickSortHelper(0, inputSize-1)
+    mark("sorted", array.length-2)
     mark("sorted", array.length-1)
     displayArray()
     
