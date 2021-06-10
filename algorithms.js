@@ -45,7 +45,7 @@ async function bubbleSort()
         displayArray()
         if (!swapped)
         {
-            for(let k=0; k<=i; ++k)
+            for(let k=0; k<inputSize; ++k)
                 mark("sorted",k)
             break;
         }
