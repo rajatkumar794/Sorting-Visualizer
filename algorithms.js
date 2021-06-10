@@ -15,7 +15,8 @@ async function selectionSort()
             }
             else
             mark("unsorted",j)
-        }    
+        }
+        mark("unsorted",min_idx)
         await swap(i,min_idx)
         mark("sorted",i)
         displayArray()
