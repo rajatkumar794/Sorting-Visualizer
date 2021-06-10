@@ -88,7 +88,7 @@
 .success{
     height: 100%;
     width: 100%;
-    background: #1abc9c;
+    background: #04aa6d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,38 +108,35 @@
     transition: 3s ease-in-out;
     animation-timing-function: ease-in-out;
     margin-left: 2px;
+    background: #1abc9c;
+
 }
 #bar1{
     height: 10%;
-    background: #1abc9c;
     animation: scaleUpDown 1.5s infinite;
     animation-delay: -2.9s;
 }
 
 #bar2{
     height: 80%;
-    background: #1abc9c;
     animation: scaleUpDown 1.5s infinite;
     animation-delay: -4.9s;
 }
 
 #bar3{
     height: 30%;
-    background: #1abc9c;
     animation: scaleUpDown 1.5s infinite;
     animation-delay: -6.9s;
 }
 
 #bar4{
     height: 70%;
-    background: #1abc9c;
     animation: scaleUpDown 1.5s infinite;
     animation-delay: -8.9s;
 }
 
 #bar5{
     height: 20%;
-    background: #1abc9c;
     animation: scaleUpDown 1.5s infinite;
     animation-delay: -10.9s;
 }
